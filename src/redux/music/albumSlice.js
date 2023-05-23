@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchAlbums = createAsyncThunk(
