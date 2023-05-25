@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Musify_React-Capstone/static/css/main.841bf152.css",
-    "main.js": "/Musify_React-Capstone/static/js/main.c078b992.js",
+    "main.js": "/Musify_React-Capstone/static/js/main.6048bafc.js",
     "static/media/musicBackground.jpg": "/Musify_React-Capstone/static/media/musicBackground.e0344d4585b806df1301.jpg",
     "index.html": "/Musify_React-Capstone/index.html",
     "main.841bf152.css.map": "/Musify_React-Capstone/static/css/main.841bf152.css.map",
-    "main.c078b992.js.map": "/Musify_React-Capstone/static/js/main.c078b992.js.map"
+    "main.6048bafc.js.map": "/Musify_React-Capstone/static/js/main.6048bafc.js.map"
   },
   "entrypoints": [
     "static/css/main.841bf152.css",
-    "static/js/main.c078b992.js"
+    "static/js/main.6048bafc.js"
   ]
 }
