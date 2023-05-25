@@ -15,9 +15,7 @@ const App = () => (
         ,
         <Route path="/music/:id" element={<Music />} />
         ,
-        <Route path="searchResults/:id" element={<Search />} />
-        ,
-        <Route path="*" element={<Home />} />
+        <Route path="/searchResults/:id" element={<Search />} />
         ,
       </Routes>
     </Router>

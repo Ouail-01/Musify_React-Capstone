@@ -21,7 +21,7 @@ export default function SearchResults({ id }) {
 
   useEffect(() => {
     dispatch(fetchAlbums(id));
-  }, [id]);
+  }, [dispatch, id]);
 
   if (status === 'loading') {
     return (
