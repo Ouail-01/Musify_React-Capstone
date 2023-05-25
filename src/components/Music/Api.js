@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchArtists } from '../../redux/music/artistesSlice';
+import '../../styles/HomeApi.css';
 
 function Api() {
   const dispatch = useDispatch();
