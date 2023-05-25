@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import {
   FaPlay, FaPause, FaStar, FaRegStar,
 } from 'react-icons/fa';
-// import '../../styles/Song.css';
+import '../../styles/Song.css';
 
 export default function Song() {
   const music = useSelector((state) => state.music);
