@@ -17,6 +17,8 @@ const App = () => (
         ,
         <Route path="/searchResults/:id" element={<Search />} />
         ,
+        <Route path="*" element={<Home />} />
+        ,
       </Routes>
     </Router>
   </div>
