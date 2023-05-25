@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { changeMusic } from '../../redux/music/musicSlice';
 import { fetchAlbums } from '../../redux/music/albumSlice';
+import '../../styles/Results.css';
 
 export default function SearchResults({ id }) {
   SearchResults.propTypes = {
