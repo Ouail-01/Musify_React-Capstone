@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
@@ -12,7 +11,7 @@ describe('SearchResults component', () => {
     };
     const { asFragment } = render(
       <Provider store={store}>
-        <SearchResults {...props} />
+        <SearchResults id={props.id} />
       </Provider>,
     );
     expect(asFragment()).toMatchSnapshot();

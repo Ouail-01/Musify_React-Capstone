@@ -9,12 +9,18 @@ export default function Song() {
   const music = useSelector((state) => state.music);
   const audio = new Audio(music.music.preview);
   const [clicked, setClicked] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const play = () => {
-    audio.play();
+    setIsPlaying(true);
+    audio.play().catch((error) => {
+      setIsPlaying(false);
+      console.error('Failed to play audio:', error);
+    });
   };
 
   const pause = () => {
+    setIsPlaying(false);
     audio.pause();
   };
 
@@ -29,11 +35,19 @@ export default function Song() {
   };
 
   useEffect(() => {
-    play();
+    if (isPlaying) {
+      audio.play().catch((error) => {
+        setIsPlaying(false);
+        console.error('Failed to play audio:', error);
+      });
+    } else {
+      audio.pause();
+    }
+
     return () => {
-      pause();
+      audio.pause();
     };
-  }, [audio, music]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isPlaying, audio]);
 
   return (
     <>
@@ -42,8 +56,11 @@ export default function Song() {
           <div className="trackSong">
             <h2>{music.music.title}</h2>
             <div>
-              <FaPlay onClick={play} />
-              <FaPause onClick={pause} className="pause" />
+              {isPlaying ? (
+                <FaPause onClick={pause} className="pause" />
+              ) : (
+                <FaPlay onClick={play} />
+              )}
               {clicked ? (
                 <FaStar onClick={saveSong} />
               ) : (

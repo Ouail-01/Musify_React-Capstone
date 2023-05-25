@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint no-param-reassign: "error" */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const ARTISTS_LIST = [

@@ -1,16 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function SearchEngine() {
   const [search, setSearch] = useState('');
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-  useEffect(() => {}, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/searchResults/${search}`);
+  };
 
   return (
-    <form action={`/searchResults/${search}`}>
-      <input type="text" onChange={handleChange} />
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={search}
+        onChange={handleChange}
+        placeholder="Search..."
+      />
     </form>
   );
 }
