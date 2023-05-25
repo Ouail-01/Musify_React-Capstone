@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const fetchAlbums = createAsyncThunk(
@@ -27,19 +26,22 @@ export const albumsSlice = createSlice({
     data: [],
     status: null,
   },
-  reducers: {
-  },
-  extraReducers: {
-    [fetchAlbums.fulfilled]: (state, { payload }) => {
-      state.data = payload;
-      state.status = 'success';
-    },
-    [fetchAlbums.pending]: (state) => {
-      state.status = 'loading';
-    },
-    [fetchAlbums.rejected]: (state) => {
-      state.status = 'failed';
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchAlbums.fulfilled, (state, action) => ({
+        ...state,
+        data: action.payload,
+        status: 'success',
+      }))
+      .addCase(fetchAlbums.pending, (state) => ({
+        ...state,
+        status: 'loading',
+      }))
+      .addCase(fetchAlbums.rejected, (state) => ({
+        ...state,
+        status: 'failed',
+      }));
   },
 });
 

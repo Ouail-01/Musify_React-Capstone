@@ -8,10 +8,7 @@ function Api() {
   const dispatch = useDispatch();
 
   const state = useSelector((state) => state.artists);
-  const search = useSelector((state) => state.search);
-
-  const filteredArtists = state.data.filter((artist) => artist.name.toLowerCase()
-    .includes(search.toLowerCase()));
+  const filteredArtists = state.data.filter((artist) => artist.name);
 
   useEffect(() => {
     dispatch(fetchArtists());
@@ -45,7 +42,7 @@ function Api() {
             </div>
           </Link>
         ))
-        ) : <p>No artist found</p>
+        ) : <p>No artist found Please refresh the page</p>
       }
     </div>
   );
