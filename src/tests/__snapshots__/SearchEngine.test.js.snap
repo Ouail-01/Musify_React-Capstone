@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchEngine component renders correctly 1`] = `
+<DocumentFragment>
+  <form
+    action="/searchResults/"
+  >
+    <input
+      type="text"
+    />
+  </form>
+</DocumentFragment>
+`;

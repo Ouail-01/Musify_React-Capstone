@@ -1,0 +1,47 @@
+header {
+  position: sticky;
+  display: flex;
+  top: 0;
+  height: 90px;
+}
+
+header ul {
+  display: flex;
+  background: #000726;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  opacity: 0.9;
+}
+
+header li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+header li h4 {
+  text-align: center;
+  font-size: 35px;
+}
+
+header a {
+  text-decoration: none;
+  color: #aeadae;
+  font-size: 25px;
+  margin: auto;
+}
+
+header .icon {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}
+
+form input {
+  margin-left: 5px;
+  height: 19px;
+  margin-right: 10px;
+}
